@@ -1,4 +1,6 @@
-// ANIMATED COUNTERS
+// =========================
+// COUNTER ANIMATION
+// =========================
 
 function animateValue(id, start, end, duration){
 
@@ -38,32 +40,28 @@ animateValue("employees", 0, 4820, 2000);
 
 animateValue("revenue", 0, 29500000000, 2000);
 
-// SEARCH BAR
+// =========================
+// SIDEBAR TOGGLE
+// =========================
 
-const search = document.querySelector(".search");
+const menuBtn = document.getElementById("menuBtn");
 
-search.addEventListener("keyup", function(){
+const sidebar = document.getElementById("sidebar");
 
-    console.log("Searching:", search.value);
+menuBtn.addEventListener("click", ()=>{
+
+    sidebar.classList.toggle("active");
 
 });
 
-// CARD ANIMATION
+// =========================
+// SEARCH
+// =========================
 
-const cards = document.querySelectorAll(".card");
+const search = document.querySelector(".search");
 
-cards.forEach(card => {
+search.addEventListener("keyup", ()=>{
 
-    card.addEventListener("mouseenter", () => {
-
-        card.style.transform = "translateY(-8px)";
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-        card.style.transform = "translateY(0px)";
-
-    });
+    console.log("Searching:", search.value);
 
 });
