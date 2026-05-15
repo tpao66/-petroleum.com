@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TPAO Petroleum Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/T%C3%BCrkiye_Petrolleri_logo.svg" alt="">
+        <h2>TPAO</h2>
+    </div>
+
+    <div class="menu">
+        <a href="#">🏠 <span>Dashboard</span></a>
+        <a href="#">⛽ <span>Production</span></a>
+        <a href="#">🛢️ <span>Oil Fields</span></a>
+        <a href="#">🌍 <span>Exploration</span></a>
+        <a href="#">📊 <span>Analytics</span></a>
+        <a href="#">👷 <span>Employees</span></a>
+        <a href="#">⚙️ <span>Settings</span></a>
+    </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <!-- HEADER -->
+
+    <div class="header">
+        <h1>TPAO Petroleum Dashboard</h1>
+
+        <input type="text" class="search" placeholder="Search...">
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Production</h3>
+            <h2 id="production">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Active Wells</h3>
+            <h2 id="wells">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Employees</h3>
+            <h2 id="employees">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Revenue</h3>
+            <h2 id="revenue">0</h2>
+        </div>
+
+    </div>
+
+    <!-- ANALYTICS -->
+
+    <div class="analytics">
+
+        <div class="chart-box">
+
+            <h2>Oil Production Analytics</h2>
+
+            <div class="chart">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+                <div class="bar bar4"></div>
+                <div class="bar bar5"></div>
+            </div>
+
+        </div>
+
+        <div class="activity-box">
+
+            <h2>Recent Activity</h2>
+
+            <div class="activity">
+                <p>✔️ New offshore drilling started</p>
+                <p>✔️ Libya exploration updated</p>
+                <p>✔️ Pipeline inspection completed</p>
+                <p>✔️ Production increased by 8%</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECTS -->
+
+    <div class="projects">
+
+        <h2>Current Projects</h2>
+
+        <table class="project-table">
+
+            <tr>
+                <th>Project</th>
+                <th>Location</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Black Sea Gas Field</td>
+                <td>Turkey</td>
+                <td><span class="status active">Active</span></td>
+            </tr>
+
+            <tr>
+                <td>Libya Offshore Exploration</td>
+                <td>Libya</td>
+                <td><span class="status running">Running</span></td>
+            </tr>
+
+            <tr>
+                <td>Pipeline Expansion</td>
+                <td>Ankara</td>
+                <td><span class="status pending">Pending</span></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        © 2026 TPAO Petroleum Company Dashboard
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
