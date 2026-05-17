@@ -1,307 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TPAO Petroleum Dashboard</title>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TPAO Petroleum Dashboard</title>
-
-    <link rel="stylesheet" href="index.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="index.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- =========================
-     TOP HEADER
-========================= -->
-
+<!-- HEADER -->
 <header class="top-header">
 
     <div class="header-left">
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/T%C3%BCrkiye_Petrolleri_logo.svg" class="header-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/T%C3%BCrkiye_Petrolleri_logo.svg"
+        class="header-logo" alt="TPAO Logo">
 
         <div class="company-text">
-
             <h2>TPAO</h2>
-
             <p>Petroleum Company</p>
-
         </div>
-
     </div>
 
-    <!-- 3 LINE MENU -->
-
-    <div class="menu-btn" id="menuBtn">
-
-        ☰
-
-    </div>
-
+    <div class="menu-btn" id="menuBtn">☰</div>
 </header>
 
-<!-- =========================
-     SIDEBAR
-========================= -->
-
+<!-- SIDEBAR -->
 <div class="sidebar" id="sidebar">
-
     <div class="menu">
-
-        <a href="#">🏠 Dashboard</a>
-
+        <a href="#">🏠 Home</a>
         <a href="#">⛽ Production</a>
-
         <a href="#">🛢️ Oil Fields</a>
-
         <a href="#">🌍 Exploration</a>
-
         <a href="#">📊 Analytics</a>
-
         <a href="#">👷 Employees</a>
-
         <a href="#">⚙️ Settings</a>
-
     </div>
-
 </div>
 
-<!-- =========================
-     MAIN CONTENT
-========================= -->
-
+<!-- MAIN -->
 <div class="main">
 
-    <!-- DASHBOARD HEADER -->
-
+    <!-- HEADER -->
     <div class="dashboard-header">
-
         <div>
-
             <h1>TPAO Petroleum Dashboard</h1>
-
             <p class="dashboard-subtitle">
-                Professional Oil & Gas Management System
+                Advanced Oil & Gas Monitoring System
             </p>
-
         </div>
 
         <input type="text" class="search" placeholder="Search...">
-
     </div>
 
-    <!-- =========================
-         STAT CARDS
-    ========================= -->
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>Total Production</h3>
-
-            <h2 id="production">0</h2>
-
-            <p>Barrels Produced</p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Active Wells</h3>
-
-            <h2 id="wells">0</h2>
-
-            <p>Operational Wells</p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Employees</h3>
-
-            <h2 id="employees">0</h2>
-
-            <p>Worldwide Staff</p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Revenue</h3>
-
-            <h2 id="revenue">0</h2>
-
-            <p>Annual Earnings</p>
-
-        </div>
-
-    </div>
-
-    <!-- =========================
-         ANALYTICS
-    ========================= -->
-
-    <div class="analytics">
-
-        <!-- CHART -->
-
-        <div class="chart-box">
-
-            <div class="section-title">
-
-                <h2>Oil Production Analytics</h2>
-
-            </div>
-
-            <div class="chart">
-
-                <div class="bar bar1"></div>
-
-                <div class="bar bar2"></div>
-
-                <div class="bar bar3"></div>
-
-                <div class="bar bar4"></div>
-
-                <div class="bar bar5"></div>
-
-            </div>
-
-        </div>
-
-        <!-- ACTIVITY -->
-
-        <div class="activity-box">
-
-            <div class="section-title">
-
-                <h2>Recent Activity</h2>
-
-            </div>
-
-            <div class="activity">
-
-                <p>✔️ New offshore drilling started</p>
-
-                <p>✔️ Libya exploration updated</p>
-
-                <p>✔️ Pipeline inspection completed</p>
-
-                <p>✔️ Production increased by 8%</p>
-
-                <p>✔️ Safety inspection completed</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- =========================
-         PROJECTS TABLE
-    ========================= -->
-
-    <div class="projects">
-
-        <div class="section-title">
-
-            <h2>Current Projects</h2>
-
-        </div>
-
-        <div class="table-container">
-
-            <table class="project-table">
-
-                <tr>
-
-                    <th>Project</th>
-
-                    <th>Location</th>
-
-                    <th>Status</th>
-
-                </tr>
-
-                <tr>
-
-                    <td>Black Sea Gas Field</td>
-
-                    <td>Turkey</td>
-
-                    <td>
-                        <span class="status active">
-                            Active
-                        </span>
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Libya Offshore Exploration</td>
-
-                    <td>Libya</td>
-
-                    <td>
-                        <span class="status running">
-                            Running
-                        </span>
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Pipeline Expansion</td>
-
-                    <td>Ankara</td>
-
-                    <td>
-                        <span class="status pending">
-                            Pending
-                        </span>
-                    </td>
-
-                </tr>
-
-            </table>
-
-        </div>
-
-    </div>
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer class="footer">
-
-        <h3>Follow Us</h3>
-
-        <div class="social-links">
-
-            <a href="#">Facebook</a>
-
-            <a href="#">Instagram</a>
-
-            <a href="#">Twitter</a>
-
-            <a href="#">LinkedIn</a>
-
-            <a href="#">YouTube</a>
-
-        </div>
+    <!-- COMPANY DESCRIPTION -->
+    <div class="company-description">
+        <h2>About TPAO</h2>
+        <p>
+            Turkish Petroleum Corporation (TPAO) is a leading energy company focused on oil and gas exploration,
+            production, and development across multiple regions. The company operates offshore and onshore drilling
+            projects, contributing significantly to national energy supply and global energy markets.
+        </p>
 
         <p>
-            © 2026 TPAO Petroleum Company
+            With advanced technology, safety standards, and sustainable energy practices, TPAO continues to expand
+            its operations in Europe, the Middle East, and North Africa.
+        </p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+        <div class="card"><h3>Total Production</h3><h2 id="production">0</h2><p>Barrels Produced</p></div>
+        <div class="card"><h3>Active Wells</h3><h2 id="wells">0</h2><p>Operational Wells</p></div>
+        <div class="card"><h3>Employees</h3><h2 id="employees">0</h2><p>Worldwide Staff</p></div>
+        <div class="card"><h3>Revenue</h3><h2 id="revenue">0</h2><p>Annual Earnings</p></div>
+    </div>
+
+    <!-- ANALYTICS -->
+    <div class="analytics">
+
+        <div class="chart-box">
+            <h2>Oil Production Analytics</h2>
+
+            <div class="chart">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+                <div class="bar bar4"></div>
+                <div class="bar bar5"></div>
+            </div>
+        </div>
+
+        <div class="activity-box">
+            <h2>Recent Activity</h2>
+            <p>✔️ Offshore drilling expanded</p>
+            <p>✔️ New pipeline inspection completed</p>
+            <p>✔️ Libya exploration updated</p>
+            <p>✔️ Production increased by 8%</p>
+        </div>
+
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="projects">
+        <h2>Current Projects</h2>
+
+        <table class="project-table">
+            <tr><th>Project</th><th>Location</th><th>Status</th></tr>
+
+            <tr>
+                <td>Black Sea Gas Field</td>
+                <td>Turkey</td>
+                <td><span class="active">Active</span></td>
+            </tr>
+
+            <tr>
+                <td>Libya Offshore Exploration</td>
+                <td>Libya</td>
+                <td><span class="running">Running</span></td>
+            </tr>
+
+            <tr>
+                <td>Pipeline Expansion</td>
+                <td>Ankara</td>
+                <td><span class="pending">Pending</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- IMAGE + VIDEO LINKS (NO CARDS) -->
+    <div class="media-section">
+
+        <h2>Media & Updates</h2>
+
+        <div class="media-links">
+
+            <p>📷 Images:</p>
+            <a href="https://www.google.com/search?q=oil+rig+images" target="_blank">View Oil Rig Images</a>
+            <a href="https://www.google.com/search?q=offshore+platform" target="_blank">Offshore Platforms</a>
+
+            <p>🎥 Videos:</p>
+            <a href="https://www.youtube.com/results?search_query=oil+drilling+process" target="_blank">Oil Drilling Process</a>
+            <a href="https://www.youtube.com/results?search_query=petroleum+engineering" target="_blank">Petroleum Engineering</a>
+
+        </div>
+    </div>
+
+    <!-- FOOTER (CLEAN - NO CARDS) -->
+    <footer class="footer">
+
+        <h2>TPAO Petroleum Company</h2>
+
+        <p>
+            TPAO is committed to delivering safe, efficient, and sustainable energy solutions.
+            Our operations span across exploration, drilling, production, and energy innovation.
+        </p>
+
+        <p class="copyright">
+            © 2026 TPAO Petroleum Company. All Rights Reserved.
         </p>
 
     </footer>
@@ -311,4 +169,4 @@
 <script src="index.js"></script>
 
 </body>
-</html>
+    </html>
