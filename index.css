@@ -64,13 +64,16 @@ body{
     font-size:13px;
 }
 
-/* MENU BUTTON */
+/* =========================
+   MENU BUTTON
+========================= */
 
 .menu-btn{
     font-size:34px;
     cursor:pointer;
     user-select:none;
     transition:0.3s;
+    color:white;
 }
 
 .menu-btn:hover{
@@ -78,26 +81,36 @@ body{
 }
 
 /* =========================
-   SIDEBAR
+   SIDEBAR DROPDOWN MENU
 ========================= */
 
 .sidebar{
     position:fixed;
-    top:80px;
-    left:0;
-    width:260px;
-    height:100%;
+    top:85px;
+    right:20px;
+    width:230px;
     background:#111827;
-    padding:30px 20px;
-    border-right:1px solid rgba(255,255,255,0.08);
-    transition:0.4s;
-    z-index:999;
+    padding:15px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,0.08);
+    display:none;
+    z-index:1000;
+    animation:menuShow 0.3s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
+
+/* SHOW MENU */
+
+.sidebar.active{
+    display:block;
+}
+
+/* MENU */
 
 .menu{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:10px;
 }
 
 .menu a{
@@ -112,7 +125,23 @@ body{
 .menu a:hover{
     background:#1e293b;
     color:#facc15;
-    transform:translateX(5px);
+    transform:translateX(3px);
+}
+
+/* MENU ANIMATION */
+
+@keyframes menuShow{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 /* =========================
@@ -120,9 +149,8 @@ body{
 ========================= */
 
 .main{
-    margin-left:260px;
+    width:100%;
     padding:110px 25px 25px;
-    width:calc(100% - 260px);
 }
 
 /* DASHBOARD HEADER */
@@ -241,25 +269,11 @@ body{
     animation:grow 2s ease;
 }
 
-.bar1{
-    height:120px;
-}
-
-.bar2{
-    height:180px;
-}
-
-.bar3{
-    height:230px;
-}
-
-.bar4{
-    height:160px;
-}
-
-.bar5{
-    height:270px;
-}
+.bar1{height:120px;}
+.bar2{height:180px;}
+.bar3{height:230px;}
+.bar4{height:160px;}
+.bar5{height:270px;}
 
 @keyframes grow{
 
@@ -328,7 +342,7 @@ body{
     font-weight:600;
 }
 
-.active{
+.active-status{
     background:#14532d;
     color:#4ade80;
 }
@@ -410,19 +424,6 @@ body{
 
 @media(max-width:992px){
 
-    .sidebar{
-        left:-260px;
-    }
-
-    .sidebar.active{
-        left:0;
-    }
-
-    .main{
-        margin-left:0;
-        width:100%;
-    }
-
     .analytics{
         grid-template-columns:1fr;
     }
@@ -491,6 +492,11 @@ body{
 
     .project-table{
         min-width:500px;
+    }
+
+    .sidebar{
+        width:200px;
+        right:10px;
     }
 
 }
