@@ -1,42 +1,99 @@
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.getElementById("sidebar");
 
-/* TOGGLE MENU */
+/* MENU TOGGLE */
+
 menuBtn.onclick = (e) => {
+
 e.stopPropagation();
+
 sidebar.classList.toggle("active");
 
-/* HISTORY STEP SYSTEM */
+/* PHONE HISTORY */
+
 if(sidebar.classList.contains("active")){
+
 history.pushState({menu:true},"");
+
 }
-else{
-history.back();
-}
+
 };
 
-/* CLOSE ON OUTSIDE CLICK */
+/* CLOSE WHEN CLICKING OUTSIDE */
+
 document.addEventListener("click",(e)=>{
-if(!sidebar.contains(e.target) && !menuBtn.contains(e.target)){
+
+if(
+sidebar.classList.contains("active") &&
+!sidebar.contains(e.target) &&
+!menuBtn.contains(e.target)
+){
+
 sidebar.classList.remove("active");
+
 }
+
 });
 
-/* CLOSE ON BACK BUTTON */
+/* PREVENT CLOSE INSIDE */
+
+sidebar.addEventListener("click",(e)=>{
+
+e.stopPropagation();
+
+});
+
+/* PHONE BACK BUTTON */
+
 window.addEventListener("popstate",()=>{
-sidebar.classList.remove("active");
-});
 
-/* CLOSE ON LINK CLICK */
-document.querySelectorAll(".menu a").forEach(a=>{
-a.addEventListener("click",()=>{
-sidebar.classList.remove("active");
-});
-});
+if(sidebar.classList.contains("active")){
 
-/* ESC KEY */
-document.addEventListener("keydown",(e)=>{
-if(e.key==="Escape"){
 sidebar.classList.remove("active");
+
 }
+
 });
+
+/* CLOSE AFTER MENU CLICK */
+
+document.querySelectorAll(".menu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+sidebar.classList.remove("active");
+
+});
+
+});
+
+/* COUNTER ANIMATION */
+
+function counter(id,start,end,speed){
+
+let obj=document.getElementById(id);
+
+let current=start;
+
+let timer=setInterval(()=>{
+
+current+=Math.ceil(end/speed);
+
+if(current>=end){
+
+current=end;
+
+clearInterval(timer);
+
+}
+
+obj.innerText=current.toLocaleString();
+
+},20);
+
+}
+
+counter("production",0,850000,100);
+counter("wells",0,240,80);
+counter("employees",0,5200,100);
+counter("revenue",0,12000000,120);
