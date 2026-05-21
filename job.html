@@ -1,0 +1,182 @@
+<!-- jobs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TPAO Careers</title>
+  <link rel="stylesheet" href="jobs.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-section">
+      <img src="logo.png" alt="TPAO Logo" class="logo">
+      <div>
+        <h1>TPAO Petroleum</h1>
+        <p>Career Opportunities</p>
+      </div>
+    </div>
+
+    <button class="menu-btn" id="menuBtn">
+      ☰
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#" class="active">Jobs</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <h2>Join The Future Of Energy</h2>
+      <p>
+        Build your career with TPAO Petroleum and become part of a world-class energy team.
+      </p>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search jobs...">
+      </div>
+    </div>
+  </section>
+
+  <!-- JOB SECTION -->
+  <section class="jobs-section">
+
+    <div class="section-title">
+      <h2>Available Positions</h2>
+      <p>Explore opportunities across engineering, offshore operations, and management.</p>
+    </div>
+
+    <div class="jobs-container" id="jobsContainer">
+
+      <!-- JOB ITEM -->
+      <div class="job-box">
+        <div class="job-top">
+          <span class="job-type">Full Time</span>
+          <span class="job-location">Offshore</span>
+        </div>
+
+        <h3>Petroleum Engineer</h3>
+
+        <p>
+          Lead drilling operations and optimize petroleum production systems.
+        </p>
+
+        <div class="job-details">
+          <span>📍 Turkey</span>
+          <span>💰 $5,500/month</span>
+        </div>
+
+        <button class="apply-btn">Apply Now</button>
+      </div>
+
+      <!-- JOB ITEM -->
+      <div class="job-box">
+        <div class="job-top">
+          <span class="job-type">Contract</span>
+          <span class="job-location">Onshore</span>
+        </div>
+
+        <h3>Mechanical Technician</h3>
+
+        <p>
+          Maintain industrial petroleum equipment and field machinery systems.
+        </p>
+
+        <div class="job-details">
+          <span>📍 Ankara</span>
+          <span>💰 $3,200/month</span>
+        </div>
+
+        <button class="apply-btn">Apply Now</button>
+      </div>
+
+      <!-- JOB ITEM -->
+      <div class="job-box">
+        <div class="job-top">
+          <span class="job-type">Full Time</span>
+          <span class="job-location">Marine</span>
+        </div>
+
+        <h3>Offshore Supervisor</h3>
+
+        <p>
+          Coordinate offshore teams and supervise petroleum vessel operations.
+        </p>
+
+        <div class="job-details">
+          <span>📍 Black Sea</span>
+          <span>💰 $6,800/month</span>
+        </div>
+
+        <button class="apply-btn">Apply Now</button>
+      </div>
+
+      <!-- JOB ITEM -->
+      <div class="job-box">
+        <div class="job-top">
+          <span class="job-type">Internship</span>
+          <span class="job-location">Office</span>
+        </div>
+
+        <h3>Data Analyst Intern</h3>
+
+        <p>
+          Support petroleum data analysis and reporting for company operations.
+        </p>
+
+        <div class="job-details">
+          <span>📍 Istanbul</span>
+          <span>💰 Paid Internship</span>
+        </div>
+
+        <button class="apply-btn">Apply Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- APPLICATION POPUP -->
+  <div class="popup" id="popup">
+    <div class="popup-box">
+
+      <span class="close-popup" id="closePopup">×</span>
+
+      <h2>Job Application</h2>
+
+      <form id="applicationForm">
+
+        <input type="text" placeholder="Full Name" required>
+
+        <input type="email" placeholder="Email Address" required>
+
+        <input type="text" placeholder="Position Applying For" required>
+
+        <textarea placeholder="Why should we hire you?" required></textarea>
+
+        <button type="submit">Submit Application</button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 TPAO Petroleum. All Rights Reserved.</p>
+  </footer>
+
+  <script src="jobs.js"></script>
+</body>
+  </html>
